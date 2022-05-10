@@ -58,7 +58,7 @@ class metal : public material {
         color albedo;
         double fuzz;
 };
-inline vec3 random()
+inline vec3 random_custom()
 {
     return vec3(random_double(), random_double(), random_double());
 }
