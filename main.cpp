@@ -72,7 +72,7 @@ hittable_list random_scene() {
                     world.add(make_shared<sphere>(center, 0.2, sphere_material));
                 } else if (choose_mat < 0.95) {
                     // metal
-                    auto albedo = random(0.5, 1);
+                    auto albedo = random_custom(0.5, 1);
                     auto fuzz = random_double(0, 0.5);
                     sphere_material = make_shared<metal>(albedo, fuzz);
                     world.add(make_shared<sphere>(center, 0.2, sphere_material));

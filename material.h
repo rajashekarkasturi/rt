@@ -11,7 +11,7 @@ class material {
         virtual bool scatter(const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered) const = 0;
 };
 
-inline vec3 random(double min, double max) 
+inline vec3 random_custom(double min, double max) 
 {
     return vec3(random_double(min,max), random_double(min,max), random_double(min,max));
 }
@@ -19,7 +19,7 @@ inline vec3 random(double min, double max)
 vec3 random_in_unit_sphere() {
     while (true) 
     {
-        auto p = random(-1,1);
+        auto p = random_custom(-1,1);
         if (p.length_squared() >= 1) continue;
         return p;
     }

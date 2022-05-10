@@ -78,10 +78,14 @@ class vec3 {
         }
    
         
-        inline vec3 random()
-        {
-            return vec3(random_double(), random_double(), random_double());
-        }
+    inline vec3 random_custom(void)
+    {
+        return vec3(random_double(), random_double(), random_double());
+    }
+
+    inline vec3 random_custom(double min, double max) {
+        return vec3(random_double(min,max), random_double(min,max), random_double(min,max));
+    }
 
     bool near_zero() const {
         // Return true if the vector is close to zero in all dimensions.
@@ -89,13 +93,10 @@ class vec3 {
         return (fabs(e[0]) < s) && (fabs(e[1]) < s) && (fabs(e[2]) < s);
     }
 
-    inline vec3 random(double min, double max) {
-        return vec3(random_double(min,max), random_double(min,max), random_double(min,max));
-    }
     
     vec3 random_in_unit_sphere() {
         while (true) {
-            auto p = random(-1,1);
+            auto p = random_custom(-1,1);
             if (p.length_squared() >= 1) continue;
             return p;
         }
