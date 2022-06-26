@@ -1,0 +1,3 @@
+Don't try to run this step in low and medium specification devices. 
+
+Takes a lot of time but more importantly hangs the devices and makes them slow.

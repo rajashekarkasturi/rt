@@ -1,0 +1,2 @@
+Anti-aliasing effect:
+Zoom in and check the ppm images of Feature_5 and Feature_6 to find the difference between both the images.

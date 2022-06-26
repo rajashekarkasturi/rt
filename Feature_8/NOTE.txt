@@ -1,0 +1,2 @@
+Shading background:
+PPM images of image8_1.ppm and image8_2.ppm will differ in looks.
